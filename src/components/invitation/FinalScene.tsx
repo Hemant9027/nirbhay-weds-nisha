@@ -141,9 +141,7 @@ export default function FinalScene() {
             ॥ सर्वे भवन्तु सुखिनः ॥
           </p>
           <p className="mt-2 font-hindi text-[0.64rem] leading-relaxed text-ivory-200/60 sm:text-xs">
-            {lang === "hi"
-              ? "ना ड्यूटी ना दफ्तर ना ही कोई बहाना, हमारे चाचू की शादी में जरूर-जरूर आना।"
-              : "No duty, no office, no excuse — please join us for this wedding."}
+            {lang === "hi" && "ना ड्यूटी ना दफ्तर ना ही कोई बहाना, हमारे चाचू की शादी में जरूर-जरूर आना।"}
           </p>
           <p className="mt-3 text-[0.62rem] text-ivory-200/55 sm:text-xs">
             Made with <span aria-label="love">❤️</span> by{" "}
