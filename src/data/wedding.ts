@@ -283,7 +283,7 @@ https://www.google.com/maps/search/?api=1&query=Kisan+Farm+House%2C+Meerut%2C+Ut
 आपकी स्नेहमयी उपस्थिति एवं मंगल आशीर्वाद हमारे इस शुभ अवसर को और भी विशेष बनाएंगे।
 
 💌 डिजिटल विवाह निमंत्रण देखें:
-https://nirbhay-weds-nisha.vercel.app/
+https://nirbhay-weds-nisha.infycrestsolutions.com/
 
 🌺 सादर — समस्त परिवारजन 🌺
 
@@ -310,7 +310,7 @@ As they begin their beautiful journey together, your presence and blessings will
 We would be delighted to have you and your family join us for this joyous celebration.
 
 💌 View Our Digital Wedding Invitation:
-https://nirbhay-weds-nisha.vercel.app/en
+https://nirbhay-weds-nisha.infycrestsolutions.com/en
 
 🗺️ Wedding Venue Directions:
 https://www.google.com/maps/search/?api=1&query=Kisan+Farm+House%2C+Meerut%2C+Uttar+Pradesh

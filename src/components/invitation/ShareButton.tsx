@@ -28,8 +28,8 @@ export default function ShareButton() {
   }, [open]);
 
   const invitationUrl = lang === "en"
-    ? "https://nirbhay-weds-nisha.vercel.app/en"
-    : "https://nirbhay-weds-nisha.vercel.app/";
+    ? "https://nirbhay-weds-nisha.infycrestsolutions.com/en"
+    : "https://nirbhay-weds-nisha.infycrestsolutions.com/";
   const shareText = lang === "en" ? EN_SHARE_TEXT : SHARE_TEXT;
   const normalizedShareText = shareText.normalize("NFC");
 
