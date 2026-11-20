@@ -56,20 +56,6 @@ export default function OpeningScene({ onOpen }: { onOpen: () => void }) {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7, filter: "blur(10px)" }}
-          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-          transition={{ delay: 2.35, duration: 1.05, ease: [0.22, 1, 0.36, 1] }}
-          className="relative grid h-[3.8rem] w-[3.8rem] shrink-0 place-items-center"
-          aria-hidden="true"
-        >
-          <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-spin-slow">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a227" strokeWidth="1.4" strokeDasharray="4 8" />
-            <circle cx="50" cy="50" r="39" fill="none" stroke="#e2c87e" strokeWidth="1" opacity="0.7" />
-          </svg>
-          <span className="font-cinzel text-xl gold-text sm:text-2xl">NN</span>
-        </motion.div>
-
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}

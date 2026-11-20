@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MonogramRing } from "./Ornaments";
+import { Ganesha } from "./Ornaments";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function LoadingScreen() {
@@ -12,7 +12,7 @@ export default function LoadingScreen() {
       aria-label="Loading"
     >
       <div className="flex flex-col items-center gap-6 px-6 text-center">
-        <MonogramRing letters="NN" className="h-32 w-32 text-[4.6rem]" />
+        <Ganesha className="h-24 w-24" />
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}

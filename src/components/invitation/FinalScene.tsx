@@ -46,15 +46,6 @@ export default function FinalScene() {
           <p className="font-hindi text-sm text-gold-300">॥ श्री गणेशाय नमः ॥</p>
         </motion.div>
 
-        {/* monogram */}
-        <motion.div variants={fade} className="relative mt-10 grid h-24 w-24 place-items-center" aria-hidden="true">
-          <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-spin-slow">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a227" strokeWidth="1.3" strokeDasharray="4 8" />
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#e2c87e" strokeWidth="0.9" opacity="0.7" />
-          </svg>
-          <span className="font-cinzel text-2xl gold-text sm:text-3xl">NN</span>
-        </motion.div>
-
         <motion.p variants={fade} className="mt-4 font-hindi text-[0.85rem] tracking-[0.18em] gold-text sm:text-lg">
           {lang === "hi" ? "॥ शुभ विवाह ॥" : "Wedding Invitation"}
         </motion.p>

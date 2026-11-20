@@ -105,28 +105,6 @@ export function Ganesha({ className = "" }: { className?: string }) {
   );
 }
 
-/** Decorative ring that frames the NN monogram */
-export function MonogramRing({ letters, className = "" }: { letters: string; className?: string }) {
-  return (
-    <div className={`relative inline-flex items-center justify-center ${className}`} aria-hidden="true">
-      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full animate-spin-slow">
-        <circle cx="100" cy="100" r="92" fill="none" stroke="#c9a227" strokeWidth="1" opacity="0.5" />
-        <circle cx="100" cy="100" r="84" fill="none" stroke="#c9a227" strokeWidth="1.4" strokeDasharray="3 9" opacity="0.8" />
-        {Array.from({ length: 8 }).map((_, i) => {
-          const a = (i * Math.PI) / 4;
-          const x = 100 + 92 * Math.cos(a);
-          const y = 100 + 92 * Math.sin(a);
-          return <circle key={i} cx={x} cy={y} r="2.2" fill="#c9a227" opacity="0.9" />;
-        })}
-      </svg>
-      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full -scale-100">
-        <circle cx="100" cy="100" r="74" fill="none" stroke="#e2c87e" strokeWidth="0.8" strokeDasharray="1 6" opacity="0.65" />
-      </svg>
-      <span className="relative font-cinzel text-[0.42em] tracking-[0.14em] gold-text pl-[0.14em]">{letters}</span>
-    </div>
-  );
-}
-
 /** Small marigold flower */
 export function Marigold({ className = "" }: { className?: string }) {
   return (
