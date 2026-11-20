@@ -23,8 +23,8 @@ function EventCard({ event, index }: { event: WeddingEvent; index: number }) {
     <motion.article
       initial={{ opacity: 0, y: 44 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-70px" }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: "-140px" }}
+      transition={{ duration: 1.1, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
       className={`relative flex w-full pl-14 md:w-1/2 md:pl-0 ${
         isWide
           ? "md:!w-full md:justify-center md:px-8"
@@ -59,10 +59,10 @@ function EventCard({ event, index }: { event: WeddingEvent; index: number }) {
       >
         {/* image — revealed as if painted */}
         <motion.div
-          initial={{ clipPath: fromLeft ? "inset(0 100% 0 0)" : "inset(0 0 0 100%)" }}
-          whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-          viewport={{ once: true, margin: "-70px" }}
-          transition={{ duration: 1.3, delay: 0.25, ease: [0.65, 0, 0.35, 1] }}
+          initial={{ opacity: 0, y: 42, scale: 0.94 }}
+          whileInView={{ opacity: 1, y: [42, -7, 0], scale: [0.94, 1.025, 1] }}
+          viewport={{ once: true, margin: "-140px" }}
+          transition={{ duration: 1.35, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
           className={`relative mx-auto overflow-hidden ${isWide ? "arch-img aspect-[16/8.5] max-h-[250px] md:w-full" : "arch-img mx-3 mt-3 aspect-[4/3.2] max-h-[230px] sm:mx-4 sm:mt-4"}`}
         >
           <img

@@ -45,7 +45,7 @@ export default function ShareButton() {
 
   const nativeShare = async () => {
     try {
-      await navigator.share({ title: "Nirbhay Weds Nisha", text: SHARE_TEXT, url: url() });
+      await navigator.share({ title: "Nirbhay Pundir Weds Nisha Tomar", text: SHARE_TEXT, url: url() });
     } catch {
       /* user cancelled */
     }

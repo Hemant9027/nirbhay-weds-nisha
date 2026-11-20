@@ -45,7 +45,7 @@ export default function WeddingMandap() {
         </h2>
         <Divider className="mt-4 w-56 sm:mt-6 sm:w-96" />
         <p className="mt-4 font-hindi text-base leading-relaxed text-gold-200 sm:mt-5 sm:text-2xl">
-          {lang === "hi" ? "चि० निर्भय पुण्डीर ॥ संग ॥ आयु० निशा" : "Nirbhay Pundir & Nisha"}
+          {lang === "hi" ? "चि० निर्भय पुण्डीर ॥ संग ॥ आयु० निशा तोमर" : "Nirbhay Pundir & Nisha Tomar"}
         </p>
         <p className="gold-text gold-text-animated mt-5 rounded-full border border-gold-500/30 bg-maroon-950/45 px-5 py-2 font-hindi text-2xl font-semibold tracking-normal sm:mt-7 sm:px-7 sm:text-5xl">
           {t.weddingDate}

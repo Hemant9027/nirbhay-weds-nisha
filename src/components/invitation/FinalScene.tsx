@@ -77,7 +77,7 @@ export default function FinalScene() {
           {lang === "hi" ? "॥ शुभ परिणयोत्सव ॥" : "Auspicious Wedding Celebration"}
         </motion.p>
         <motion.p variants={fade} className="mt-2 font-hindi text-sm text-ivory-100 sm:text-base">
-          {lang === "hi" ? "चि० निर्भय पुण्डीर एवं आयु० निशा" : "Nirbhay Pundir & Nisha"}
+          {lang === "hi" ? "चि० निर्भय पुण्डीर एवं आयु० निशा तोमर" : "Nirbhay Pundir & Nisha Tomar"}
         </motion.p>
         <motion.p variants={fade} className="mt-3 font-hindi text-xs text-gold-300/90 sm:text-sm">
           {lang === "hi" ? "दर्शनाभिलाषी — समस्त परिवारजन" : "With warm regards — the families"}

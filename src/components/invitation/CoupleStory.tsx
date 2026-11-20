@@ -86,7 +86,7 @@ export default function CoupleStory() {
             <span className="font-hindi text-xs text-gold-600 sm:text-base">{lang === "hi" ? "॥ संग ॥" : "&"}</span>
             <Sparkle className="h-3.5 w-3.5 text-gold-500" />
           </motion.div>
-          <NameMedallion name={lang === "hi" ? "आयु० निशा" : "Nisha"} label={t.brideLabel} delay={0.1} />
+          <NameMedallion name={lang === "hi" ? "आयु० निशा तोमर" : "Nisha Tomar"} label={t.brideLabel} delay={0.1} />
         </motion.div>
 
         <motion.div variants={fadeUp} className="mt-8 flex items-center gap-3 sm:mt-16 sm:gap-6" aria-hidden="true">

@@ -1,8 +1,7 @@
 export type Lang = "en" | "hi";
 
 export const GROOM = "Nirbhay";
-export const BRIDE = "Nisha";
-export const MONOGRAM = "NN";
+export const BRIDE = "Nisha Tomar";
 export const WEDDING_DATE_ISO = "2026-12-11";
 export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Kisan+Farm+House%2C+Meerut%2C+Uttar+Pradesh";
 export const VENUE_NAME = "किसान फार्म हाउस";
@@ -145,7 +144,7 @@ export const EVENTS: WeddingEvent[] = [
 export const content = {
   en: {
     skip: "Skip to invitation",
-    loadingNames: "Nirbhay × Nisha",
+    loadingNames: "Nirbhay × Nisha Tomar",
     openCta: "View the Wedding Programs",
     withBlessings: "With the blessings of our families and Lord Ganesha",
     shubhVivah: "शुभ विवाह",
@@ -154,7 +153,7 @@ export const content = {
     scroll: "Scroll",
     storyEyebrow: "॥ Auspicious Introduction ॥",
     storyTitle: "The union of two families, a celebration of blessings",
-    storyP1: "By the grace of God and the blessings of our elders, Nirbhay and Nisha are entering the sacred bond of marriage.",
+    storyP1: "By the grace of God and the blessings of our elders, Nirbhay Pundir and Nisha Tomar are entering the sacred bond of marriage.",
     storyP2: "We warmly seek your presence and auspicious blessings on this sacred occasion.",
     groomLabel: "Groom",
     brideLabel: "Bride",
@@ -169,7 +168,7 @@ export const content = {
     weddingEyebrow: "The Sacred Moment",
     weddingTitle: "The Wedding",
     weddingDate: "11 December 2026",
-    weddingQuote: "With Agni as witness, Nirbhay and Nisha join in the sacred bond of marriage.",
+    weddingQuote: "With Agni as witness, Nirbhay Pundir and Nisha Tomar join in the sacred bond of marriage.",
     countdownTitle: "॥ Awaiting the Auspicious Hour ॥",
     countdownOver: "The celebration has begun!",
     days: "Days",
@@ -183,7 +182,7 @@ export const content = {
     directions: "View Venue Directions",
     inviteTitle: "॥ Cordially Invited ॥",
     inviteP1: "As two families unite in this sacred celebration, your gracious presence will make our occasion truly auspicious.",
-    thankYou: "Please join us with your family and bless Nirbhay and Nisha with your love.",
+    thankYou: "Please join us with your family and bless Nirbhay Pundir and Nisha Tomar with your love.",
     rsvpTitle: "RSVP",
     rsvpLabel: "For your warm wishes",
     footerCraft: "Crafted with love",
@@ -211,7 +210,7 @@ export const content = {
     scroll: "देखें",
     storyEyebrow: "॥ मंगल मिलन ॥",
     storyTitle: "दो परिवारों का मंगल मिलन, संस्कारों का पावन संगम",
-    storyP1: "ईश्वर की कृपा एवं पूज्यजनों के आशीर्वाद से चि० निर्भय पुण्डीर एवं आयु० निशा विवाह के पवित्र बंधन में बंधने जा रहे हैं।",
+    storyP1: "ईश्वर की कृपा एवं पूज्यजनों के आशीर्वाद से चि० निर्भय पुण्डीर एवं आयु० निशा तोमर विवाह के पवित्र बंधन में बंधने जा रहे हैं।",
     storyP2: "इस शुभ अवसर पर आपकी स्नेहमयी उपस्थिति एवं शुभाशीष की हार्दिक अभिलाषा है।",
     groomLabel: "वर",
     brideLabel: "वधू",
@@ -261,7 +260,7 @@ export const content = {
 
 export type Content = (typeof content)["en"] | (typeof content)["hi"];
 
-export const SHARE_TEXT = `Nirbhay Weds Nisha
+export const SHARE_TEXT = `Nirbhay Pundir Weds Nisha Tomar
 
 आप सादर आमंत्रित हैं हमारे शुभ विवाह समारोह में।
 

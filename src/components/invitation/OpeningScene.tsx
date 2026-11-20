@@ -70,7 +70,7 @@ export default function OpeningScene({ onOpen }: { onOpen: () => void }) {
               {lang === "hi" ? "॥ संग ॥" : "WEDS"}
             </span>
             <span className={`block ${lang === "hi" ? "font-hindi" : "font-display"}`}>
-              {lang === "hi" ? "आयु० निशा" : "Nisha"}
+              {lang === "hi" ? "आयु० निशा तोमर" : "Nisha Tomar"}
             </span>
           </motion.h1>
 

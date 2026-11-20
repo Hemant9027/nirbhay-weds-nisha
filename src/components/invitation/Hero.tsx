@@ -74,7 +74,7 @@ export default function Hero({ opened }: { opened: boolean }) {
           <h1 className="mt-16 font-display font-semibold uppercase leading-[1.02] tracking-[0.06em] text-maroon-800 sm:mt-20">
             <span className="block font-hindi text-[clamp(1.95rem,8.8vw,5rem)]">{lang === "hi" ? "चि० निर्भय पुण्डीर" : "Nirbhay Pundir"}</span>
             <span className="my-1 block font-hindi text-[clamp(0.85rem,2.6vw,1.45rem)] tracking-normal text-gold-600 sm:my-2">{lang === "hi" ? "॥ संग ॥" : "WEDS"}</span>
-            <span className="mt-6 block font-hindi text-[clamp(1.95rem,8.8vw,5rem)] sm:mt-7">{lang === "hi" ? "आयु० निशा" : "Nisha"}</span>
+            <span className="mt-6 block font-hindi text-[clamp(1.95rem,8.8vw,5rem)] sm:mt-7">{lang === "hi" ? "आयु० निशा तोमर" : "Nisha Tomar"}</span>
           </h1>
         </motion.div>
 

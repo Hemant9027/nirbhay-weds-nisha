@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Ganesha } from "./Ornaments";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function LoadingScreen() {
@@ -12,7 +11,13 @@ export default function LoadingScreen() {
       aria-label="Loading"
     >
       <div className="flex flex-col items-center gap-6 px-6 text-center">
-        <Ganesha className="h-24 w-24" />
+        <img
+          src="/images/ganesh-ji-transparent.png"
+          alt="Lord Ganesha"
+          width={556}
+          height={612}
+          className="h-28 w-24 object-contain drop-shadow-[0_8px_20px_rgba(201,162,39,0.32)] sm:h-32 sm:w-28"
+        />
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
