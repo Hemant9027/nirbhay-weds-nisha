@@ -13,9 +13,9 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "nn-lang";
 
 function getInitialLang(): Lang {
-  if (typeof window === "undefined") return "en";
+  if (typeof window === "undefined") return "hi";
   const saved = window.localStorage.getItem(STORAGE_KEY);
-  return saved === "hi" ? "hi" : "en";
+  return saved === "en" ? "en" : "hi";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
