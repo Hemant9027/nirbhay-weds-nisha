@@ -129,7 +129,7 @@ export default function OpeningScene({ onOpen }: { onOpen: () => void }) {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             onClick={onOpen}
-            className="btn-gold pointer-events-auto col-start-1 row-start-1 px-6 py-3 text-[0.68rem] sm:px-9 sm:py-4 sm:text-sm"
+            className="btn-gold pointer-events-auto col-start-1 row-start-1 px-6 py-3 text-[0.88rem] sm:px-9 sm:py-4 sm:text-lg"
             autoFocus
           >
             <span className="relative block">

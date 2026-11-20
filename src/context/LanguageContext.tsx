@@ -14,6 +14,7 @@ const STORAGE_KEY = "nn-lang";
 
 function getInitialLang(): Lang {
   if (typeof window === "undefined") return "hi";
+  if (window.location.pathname === "/en" || window.location.pathname.startsWith("/en/")) return "en";
   const saved = window.localStorage.getItem(STORAGE_KEY);
   return saved === "en" ? "en" : "hi";
 }
@@ -22,6 +23,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(getInitialLang);
 
   const setLang = useCallback((l: Lang) => {
+    const nextPath = l === "en" ? "/en" : "/";
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({}, "", nextPath);
+    }
     setLangState(l);
     try {
       window.localStorage.setItem(STORAGE_KEY, l);
@@ -37,6 +42,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
+
+  useEffect(() => {
+    const syncRouteLanguage = () => {
+      setLangState(window.location.pathname === "/en" || window.location.pathname.startsWith("/en/") ? "en" : "hi");
+    };
+    window.addEventListener("popstate", syncRouteLanguage);
+    return () => window.removeEventListener("popstate", syncRouteLanguage);
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ lang, t: content[lang] as Content, setLang, toggle }}>

@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Link2, MessageCircle, Share2, Send } from "lucide-react";
-import { SHARE_TEXT } from "../../data/wedding";
+import { EN_SHARE_TEXT, SHARE_TEXT } from "../../data/wedding";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function ShareButton() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [toast, setToast] = useState("");
   const ref = useRef<HTMLDivElement>(null);
 
   const canNativeShare = typeof navigator !== "undefined" && !!navigator.share;
@@ -26,26 +27,66 @@ export default function ShareButton() {
     };
   }, [open]);
 
-  const url = () => window.location.href;
+  const invitationUrl = lang === "en"
+    ? "https://nirbhay-weds-nisha.vercel.app/en"
+    : "https://nirbhay-weds-nisha.vercel.app/";
+  const shareText = lang === "en" ? EN_SHARE_TEXT : SHARE_TEXT;
+  const normalizedShareText = shareText.normalize("NFC");
+
+  const showToast = (message: string) => {
+    setToast(message);
+    window.setTimeout(() => setToast(""), 2200);
+  };
 
   const shareWhatsApp = () => {
-    window.open(`https://wa.me/?text=${encodeURIComponent(`${SHARE_TEXT}\n\n${url()}`)}`, "_blank", "noopener");
+    const encodedText = encodeURIComponent(normalizedShareText);
+    window.open(`https://api.whatsapp.com/send?text=${encodedText}`, "_blank", "noopener,noreferrer");
     setOpen(false);
+  };
+
+  const copyInvitation = async () => {
+    try {
+      await navigator.clipboard.writeText(normalizedShareText);
+      showToast(lang === "en" ? "Wedding invitation copied! 🌸" : "विवाह निमंत्रण कॉपी हो गया! 🌸");
+    } catch {
+      showToast(lang === "en" ? "Unable to copy invitation" : "निमंत्रण कॉपी नहीं हो सका");
+    }
   };
 
   const copyLink = async () => {
     try {
-      await navigator.clipboard.writeText(url());
+      await navigator.clipboard.writeText(invitationUrl);
       setCopied(true);
+      showToast(lang === "en" ? "Link copied! 🌸" : "लिंक कॉपी हो गया! 🌸");
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
-      /* clipboard unavailable */
+      showToast(lang === "en" ? "Unable to copy link" : "लिंक कॉपी नहीं हो सका");
     }
   };
 
   const nativeShare = async () => {
     try {
-      await navigator.share({ title: "Nirbhay Pundir Weds Nisha Tomar", text: SHARE_TEXT, url: url() });
+      const shareData: ShareData = {
+        title: lang === "en" ? "Wedding Invitation" : "शुभ विवाह निमंत्रण",
+        text: normalizedShareText,
+      };
+      const previewUrl = `${window.location.origin}/images/preview.png`;
+      if (navigator.canShare) {
+        try {
+          const response = await fetch(previewUrl);
+          const blob = await response.blob();
+          const file = new File([blob], "wedding-preview.png", { type: "image/png" });
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({ ...shareData, files: [file] });
+          } else {
+            await navigator.share(shareData);
+          }
+        } catch {
+          await navigator.share(shareData);
+        }
+      } else {
+        await navigator.share(shareData);
+      }
     } catch {
       /* user cancelled */
     }
@@ -73,20 +114,26 @@ export default function ShareButton() {
               <span className="grid h-8 w-8 place-items-center rounded-full bg-[#25D366]/15 text-[#4be389]">
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
               </span>
-              {t.whatsapp}
+              {lang === "hi" ? "WhatsApp पर भेजें" : "Share on WhatsApp"}
+            </button>
+            <button role="menuitem" onClick={copyInvitation} className={btn}>
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-gold-500/15 text-gold-300">
+                <Check className="h-4 w-4" aria-hidden="true" />
+              </span>
+              {lang === "hi" ? "निमंत्रण कॉपी करें" : "Copy Invitation"}
             </button>
             <button role="menuitem" onClick={copyLink} className={btn}>
               <span className="grid h-8 w-8 place-items-center rounded-full bg-gold-500/15 text-gold-300">
                 {copied ? <Check className="h-4 w-4 text-green-400" aria-hidden="true" /> : <Link2 className="h-4 w-4" aria-hidden="true" />}
               </span>
-              {copied ? t.copied : t.copyLink}
+              {lang === "hi" ? "लिंक कॉपी करें" : "Copy Link"}
             </button>
             {canNativeShare && (
               <button role="menuitem" onClick={nativeShare} className={btn}>
                 <span className="grid h-8 w-8 place-items-center rounded-full bg-gold-500/15 text-gold-300">
                   <Send className="h-4 w-4" aria-hidden="true" />
                 </span>
-                {t.shareVia}
+                {lang === "hi" ? "निमंत्रण साझा करें" : "Share Invitation"}
               </button>
             )}
           </motion.div>
@@ -106,6 +153,20 @@ export default function ShareButton() {
       >
         <Share2 className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
       </motion.button>
+
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            role="status"
+            className="fixed bottom-24 left-1/2 z-[90] -translate-x-1/2 whitespace-nowrap rounded-full border border-gold-500/40 bg-maroon-900/95 px-4 py-2 text-xs text-gold-200 shadow-xl backdrop-blur-md"
+          >
+            {toast}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

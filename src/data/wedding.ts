@@ -260,8 +260,61 @@ export const content = {
 
 export type Content = (typeof content)["en"] | (typeof content)["hi"];
 
-export const SHARE_TEXT = `Nirbhay Pundir Weds Nisha Tomar
+export const SHARE_TEXT = `🙏 ॥ श्री गणेशाय नमः ॥ 🙏
 
-आप सादर आमंत्रित हैं हमारे शुभ विवाह समारोह में।
+🌸 ॥ सादर विवाह निमंत्रण ॥ 🌸
 
-11 December 2026`;
+श्री गणेश जी की असीम कृपा एवं पूज्यजनों के शुभ आशीर्वाद से हमारे परिवार में एक मंगल अवसर आया है।
+
+💐 चि० निर्भय पुण्डीर
+           संग
+💐 आयु० निशा तोमर
+
+के शुभ परिणयोत्सव के पावन अवसर पर आप एवं आपका समस्त परिवार सादर आमंत्रित हैं।
+
+📅 शुक्रवार, 11 दिसंबर 2026
+📍 किसान फार्म हाउस
+शिव मंदिर के पास, भटौपुरा चौपला,
+शुगर मिल रोड, गढ़ रोड, मेरठ
+
+विवाह स्थल का नक्शा:
+https://www.google.com/maps/search/?api=1&query=Kisan+Farm+House%2C+Meerut%2C+Uttar+Pradesh
+
+आपकी स्नेहमयी उपस्थिति एवं मंगल आशीर्वाद हमारे इस शुभ अवसर को और भी विशेष बनाएंगे।
+
+💌 डिजिटल विवाह निमंत्रण देखें:
+https://nirbhay-weds-nisha.vercel.app/
+
+🌺 सादर — समस्त परिवारजन 🌺
+
+🙏 कृपया सपरिवार पधारकर नवयुगल को अपना शुभाशीष प्रदान करें।`;
+
+export const EN_SHARE_TEXT = `🪷 || Shree Ganeshaya Namah || 🪷
+
+💍 WEDDING INVITATION 💍
+
+With the divine blessings of Lord Ganesha and the love of our families, we cordially invite you and your family to celebrate the auspicious wedding of
+
+✨ Nirbhay Pundir
+
+❤️ & ❤️
+
+✨ Nisha Tomar
+
+As they begin their beautiful journey together, your presence and blessings will make this occasion truly special.
+
+📅 Friday, 11 December 2026
+
+📍 Kisan Farm House, Meerut
+
+We would be delighted to have you and your family join us for this joyous celebration.
+
+💌 View Our Digital Wedding Invitation:
+https://nirbhay-weds-nisha.vercel.app/en
+
+🗺️ Wedding Venue Directions:
+https://www.google.com/maps/search/?api=1&query=Kisan+Farm+House%2C+Meerut%2C+Uttar+Pradesh
+
+🌸 With Warm Regards — The Entire Family
+
+🙏 We look forward to celebrating with you!`;
